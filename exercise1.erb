@@ -4,8 +4,8 @@ def apiCall(mainURL)
 
     url = URI.parse(mainURL)
     puts url.class
-    # puts url
-    # req = Net::HTTP::Get.new(url.to_s)
+    puts url
+    req = Net::HTTP::Get.new(url.to_s)
     response =  Net::HTTP.get(url)
     return response
 end
