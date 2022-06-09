@@ -1,0 +1,46 @@
+require 'net/http'
+
+def apiCall(mainURL)
+
+    url = URI.parse(mainURL)
+    # puts url.class
+    # puts url
+    # req = Net::HTTP::Get.new(url.to_s)
+    response =  Net::HTTP.get(url)
+    return response
+end
+# puts apiCall('http://www.example.com/index.html')
+module Gfg
+    module NewModule 
+        def NewModule.test 
+        puts "test of inner module"
+        end
+    end
+    C = 10;
+    
+    # Prefix with name of Module
+    # module method 
+    def Gfg.portal
+        puts "Welcome to GFG Portal!"
+    end
+        
+    # Prefix with the name of Module
+    # module method
+    def Gfg.tutorial  
+        puts "Ruby Tutorial!"
+    end
+        
+    # Prefix with the name of Module
+    # module method
+    def Gfg.topic  
+        puts "Topic - Module"
+    end
+      
+end
+   
+# displaying the value of 
+# module constant
+puts Gfg::C
+  
+# calling the methods of the module
+Gfg::NewModule.test
