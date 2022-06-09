@@ -5,6 +5,13 @@ def apiCall(mainURL)
     url = URI.parse(mainURL)
     puts url.class
     response =  Net::HTTP.get(url)
+    response =  Net::HTTP.get(url)
+    response =  Net::HTTP.get(url)
+    response =  Net::HTTP.get(url)
+    response =  Net::HTTP.get(url)
+    return response
+    return response
+    return response
     return response
 end
 puts apiCall('http://www.example.com/index.html')
